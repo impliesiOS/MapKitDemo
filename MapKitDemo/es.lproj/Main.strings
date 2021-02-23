@@ -1,0 +1,63 @@
+
+/* Class = "UIButton"; normalTitle = "Stop"; ObjectID = "1Ag-H7-OMR"; */
+"1Ag-H7-OMR.normalTitle" = "Stop";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "3Xg-Xo-eFq"; */
+"3Xg-Xo-eFq.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "Floating TextField"; ObjectID = "AxU-Y5-YnY"; */
+"AxU-Y5-YnY.normalTitle" = "Floating TextField";
+
+/* Class = "UITextField"; placeholder = "Password"; ObjectID = "Ceq-Jm-3q6"; */
+"Ceq-Jm-3q6.placeholder" = "Password";
+
+/* Class = "UIButton"; normalTitle = "Undo"; ObjectID = "Dwn-Po-gXJ"; */
+"Dwn-Po-gXJ.normalTitle" = "Undo";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "Hcu-cn-hEa"; */
+"Hcu-cn-hEa.text" = "Label";
+
+/* Class = "UITextField"; placeholder = "First Name"; ObjectID = "M7M-rF-aAz"; */
+"M7M-rF-aAz.placeholder" = "First Name";
+
+/* Class = "UITextField"; placeholder = "Phone number"; ObjectID = "W72-mC-HeW"; */
+"W72-mC-HeW.placeholder" = "Phone number";
+
+/* Class = "UIButton"; normalTitle = "Submit"; ObjectID = "bqM-zu-vWZ"; */
+"bqM-zu-vWZ.normalTitle" = "Submit";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "c9a-cd-wIS"; */
+"c9a-cd-wIS.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "Enjoy"; ObjectID = "h8o-Ip-rha"; */
+"h8o-Ip-rha.normalTitle" = "Enjoy";
+
+/* Class = "UIButton"; normalTitle = "Select Your Color"; ObjectID = "igg-4z-ake"; */
+"igg-4z-ake.normalTitle" = "Select Your Color";
+
+/* Class = "UITextField"; placeholder = "City"; ObjectID = "j5q-TS-dmA"; */
+"j5q-TS-dmA.placeholder" = "City";
+
+/* Class = "UIButton"; normalTitle = "Start"; ObjectID = "khl-3l-Zjn"; */
+"khl-3l-Zjn.normalTitle" = "Start";
+
+/* Class = "UITextField"; placeholder = "Email"; ObjectID = "kj9-f6-43c"; */
+"kj9-f6-43c.placeholder" = "Email";
+
+/* Class = "UIButton"; normalTitle = "Analize Your Data"; ObjectID = "mIh-at-48F"; */
+"mIh-at-48F.normalTitle" = "Analize Your Data";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "nw6-0h-pe0"; */
+"nw6-0h-pe0.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "pgm-dF-oKU"; */
+"pgm-dF-oKU.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "Redo"; ObjectID = "qXn-4E-ua1"; */
+"qXn-4E-ua1.normalTitle" = "Redo";
+
+/* Class = "UITextField"; placeholder = "Last Name"; ObjectID = "re6-gZ-bKP"; */
+"re6-gZ-bKP.placeholder" = "Last Name";
+
+/* Class = "UIButton"; normalTitle = "Clear"; ObjectID = "v2b-xt-Ltk"; */
+"v2b-xt-Ltk.normalTitle" = "Clear";
