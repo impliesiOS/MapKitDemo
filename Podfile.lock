@@ -1,0 +1,45 @@
+PODS:
+  - CVCalendar (1.7.0)
+  - GoogleMaps (4.1.0):
+    - GoogleMaps/Maps (= 4.1.0)
+  - GoogleMaps/Base (4.1.0)
+  - GoogleMaps/Maps (4.1.0):
+    - GoogleMaps/Base
+  - GooglePlaces (4.1.0):
+    - GoogleMaps/Base (= 4.1.0)
+  - RProgressView (1.0.2)
+  - SkyFloatingLabelTextField (3.8.0)
+  - SwiftChart (1.0.1)
+  - SwiftSignatureView (3.2.0)
+
+DEPENDENCIES:
+  - CVCalendar (~> 1.7.0)
+  - GoogleMaps (= 4.1.0)
+  - GooglePlaces
+  - RProgressView
+  - SkyFloatingLabelTextField (~> 3.0)
+  - SwiftChart
+  - SwiftSignatureView
+
+SPEC REPOS:
+  trunk:
+    - CVCalendar
+    - GoogleMaps
+    - GooglePlaces
+    - RProgressView
+    - SkyFloatingLabelTextField
+    - SwiftChart
+    - SwiftSignatureView
+
+SPEC CHECKSUMS:
+  CVCalendar: 1174c1b43c1a258970e14c1e8b19ef4106c5900b
+  GoogleMaps: 008e2c80e38605b56b560e8deb73d4194ff30bef
+  GooglePlaces: a058b776259c13e1323c9ff135549cb1b13ad8e7
+  RProgressView: 2b183d6a654df885dd84c163178f5fe712ca7f7e
+  SkyFloatingLabelTextField: 5a338412114808e961fe2d14ea2c5452c8b6e4aa
+  SwiftChart: ba767a678d568a5ee22d419e146a0582865e1aff
+  SwiftSignatureView: cd8cca297cc2ca6a6c174da22fb908c33d03d3c0
+
+PODFILE CHECKSUM: f7c2ca3b3049668550b2fe61297be2ce47fc0872
+
+COCOAPODS: 1.8.4
