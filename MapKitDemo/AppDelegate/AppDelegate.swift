@@ -9,17 +9,33 @@ import UIKit
 import CoreData
 import GoogleMaps
 import GooglePlaces
+import Firebase
 
 @main
-class AppDelegate: UIResponder, UIApplicationDelegate {
-
-
+class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate, MessagingDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        
+        FirebaseApp.configure()
+        
+        Messaging.messaging().isAutoInitEnabled = true
+
+        
+        Messaging.messaging().delegate = self
+
+        application.registerForRemoteNotifications()
         
         GMSServices.provideAPIKey("AIzaSyDKHA7VTCLokNS1bq0IQu31buXHe8Bmta8")
         GMSPlacesClient.provideAPIKey("AIzaSyDKHA7VTCLokNS1bq0IQu31buXHe8Bmta8")
         GMSServices.provideAPIKey("AIzaSyDKHA7VTCLokNS1bq0IQu31buXHe8Bmta8")
+        
+        Messaging.messaging().token { token, error in
+          if let error = error {
+            print("Error fetching FCM registration token: \(error)")
+          } else if let token = token {
+            print("FCM registration token: \(token)")
+          }
+        }
         // Override point for customization after application launch.
         return true
     }
@@ -36,6 +52,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the user discards a scene session.
         // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
+    }
+    func messaging(_ messaging: Messaging, didReceiveRegistrationToken fcmToken: String?) {
+      print("Firebase registration token: \(String(describing: fcmToken))")
+
+      let dataDict:[String: String] = ["token": fcmToken ?? ""]
+      NotificationCenter.default.post(name: Notification.Name("FCMToken"), object: nil, userInfo: dataDict)
+      // TODO: If necessary send token to application server.
+      // Note: This callback is fired at each app startup and whenever a new token is generated.
+    }
+    func application(_ application: UIApplication,
+                     didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+      Messaging.messaging().apnsToken = deviceToken
     }
 
     // MARK: - Core Data stack

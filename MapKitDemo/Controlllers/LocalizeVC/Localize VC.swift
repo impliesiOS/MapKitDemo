@@ -21,7 +21,11 @@ class Localize_VC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        LBL_Name.text = NSLocalizedString("My Name is Karan", comment: "")  //"My Name is karan"
+        LBL_Surname.text = NSLocalizedString("My Surname is Chodavadiya", comment: "") //"My Surname is Chodavadiya"
+        LBL_Hello.text = NSLocalizedString("hello", comment: "") //"hello"
+        LBL_HowAreYou.text = NSLocalizedString("How Are you", comment: "") //"How Are you"
+        LBL_Nice.text = NSLocalizedString("Nice", comment: "") //"Nice"
         // Do any additional setup after loading the view.
     }
     

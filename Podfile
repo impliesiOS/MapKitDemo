@@ -12,6 +12,8 @@ target 'MapKitDemo' do
  pod "SwiftSignatureView"
  pod 'SkyFloatingLabelTextField', '~> 3.0'
  pod "SwiftChart"
+ pod 'Firebase/Analytics'
+ pod 'Firebase/Messaging'
 
 
   # Pods for MapKitDemo
