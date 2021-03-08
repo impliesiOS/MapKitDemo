@@ -38,15 +38,15 @@ class FlotingTextFieldVC: UIViewController {
         TXT_City.delegate = self
         TXT_PhoneNumber.delegate = self
         
-//MARK:- Assign First responder to textfield
-        
-        TXT_FirstName.addTarget(TXT_LastName, action: #selector(becomeFirstResponder), for: .editingDidEndOnExit)
-        TXT_LastName.addTarget(TXT_Email, action: #selector(becomeFirstResponder), for: .editingDidEndOnExit)
-        TXT_Email.addTarget(TXT_Password, action: #selector(becomeFirstResponder), for: .editingDidEndOnExit)
-        TXT_Password.addTarget(TXT_City, action: #selector(becomeFirstResponder), for: .editingDidEndOnExit)
-        TXT_City.addTarget(TXT_PhoneNumber, action: #selector(becomeFirstResponder), for: .editingDidEndOnExit)
-        TXT_PhoneNumber.addTarget(TXT_PhoneNumber, action: #selector(becomeFirstResponder), for: .editingDidEndOnExit)
-        // Do any additional setup after loading the view.
+////MARK:- Assign First responder to textfield
+//        
+//        TXT_FirstName.addTarget(TXT_LastName, action: #selector(becomeFirstResponder), for: .editingDidEndOnExit)
+//        TXT_LastName.addTarget(TXT_Email, action: #selector(becomeFirstResponder), for: .editingDidEndOnExit)
+//        TXT_Email.addTarget(TXT_Password, action: #selector(becomeFirstResponder), for: .editingDidEndOnExit)
+//        TXT_Password.addTarget(TXT_City, action: #selector(becomeFirstResponder), for: .editingDidEndOnExit)
+//        TXT_City.addTarget(TXT_PhoneNumber, action: #selector(becomeFirstResponder), for: .editingDidEndOnExit)
+//        TXT_PhoneNumber.addTarget(TXT_PhoneNumber, action: #selector(becomeFirstResponder), for: .editingDidEndOnExit)
+//        // Do any additional setup after loading the view.
     }
     
 //MARK:- Add Done button on numeric keybord

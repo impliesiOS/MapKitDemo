@@ -7,14 +7,15 @@ target 'MapKitDemo' do
 
  pod 'GoogleMaps', '4.1.0'
  pod 'GooglePlaces'
- pod 'CVCalendar', '~> 1.7.0'
+    pod 'FSCalendar'
+
  pod 'RProgressView'
  pod "SwiftSignatureView"
  pod 'SkyFloatingLabelTextField', '~> 3.0'
  pod "SwiftChart"
  pod 'Firebase/Analytics'
  pod 'Firebase/Messaging'
-
+ pod 'CircleBar'
 
   # Pods for MapKitDemo
 

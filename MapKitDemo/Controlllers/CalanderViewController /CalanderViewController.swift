@@ -6,50 +6,24 @@
 //
 
 import UIKit
-import CVCalendar
+import FSCalendar
 
-class CalanderViewController: UIViewController,MenuViewDelegate,CVCalendarViewDelegate{
-    func presentationMode() -> CalendarMode {
-        return .monthView
-    }
+class CalanderViewController: UIViewController{
     
-    func firstWeekday() -> Weekday {
-        return .monday
-    }
-    
-      @IBOutlet weak var menuView: CVCalendarMenuView!
-      @IBOutlet weak var calendarView: CVCalendarView!
-    
+    @IBOutlet weak var Calander: FSCalendar!
     override func viewDidLoad() {
         setGradientBackground()
         super.viewDidLoad()
-        
-        self.navigationController?.setNavigationBarHidden(true, animated: true)
-        // Appearance delegate [Unnecessary]
-        self.calendarView.calendarAppearanceDelegate = self
-
-        // Animator delegate [Unnecessary]
-        self.calendarView.animatorDelegate = self
-
-        // Menu delegate [Required]
-        self.menuView.menuViewDelegate = self
-
-        // Calendar delegate [Required]
-        self.calendarView.calendarDelegate = self
-        // Do any additional setup after loading the view.
     }
     override func viewDidLayoutSubviews() {
            super.viewDidLayoutSubviews()
-
-           menuView.commitMenuViewUpdate()
-           calendarView.commitCalendarViewUpdate()
        }
     
     func setGradientBackground() {
         
-        let colorTop =  UIColor.white.cgColor
+        let colorTop =  UIColor.yellow.cgColor
        // let colorcenter = UIColor.white.cgColor
-        let colorBottom = UIColor.red.cgColor
+        let colorBottom = UIColor.systemPink.cgColor
                     
         let gradientLayer = CAGradientLayer()
         gradientLayer.colors = [colorTop,colorBottom]

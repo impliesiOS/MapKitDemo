@@ -69,7 +69,7 @@ extension MapViewController: MKMapViewDelegate {
         //CLLocationCoordinate2D
         mapView.mapType = MKMapType.standard
 
-        let span = MKCoordinateSpan(latitudeDelta: 0.05,longitudeDelta: 0.05)
+        let span = MKCoordinateSpan(latitudeDelta: 0.50,longitudeDelta: 0.50)
         let region = MKCoordinateRegion(center: locValue, span: span)
         mapView.setRegion(region, animated: true)
 

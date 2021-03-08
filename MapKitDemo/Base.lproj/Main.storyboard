@@ -42,7 +42,7 @@
         <scene sceneID="2v9-sD-nlU">
             <objects>
                 <navigationController id="lML-4s-KG3" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="mostRecent" id="Co8-3K-4HF"/>
+                    <tabBarItem key="tabBarItem" image="lasso.sparkles" catalog="system" landscapeImage="lasso.sparkles" id="Co8-3K-4HF"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="L64-Zo-2Lv">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -75,7 +75,7 @@
         <scene sceneID="AaR-Hn-plr">
             <objects>
                 <navigationController id="Cuc-kz-r3l" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="search" id="uja-qw-sX4"/>
+                    <tabBarItem key="tabBarItem" image="folder.badge.questionmark" catalog="system" id="uja-qw-sX4"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="71q-Xc-Hm6">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -96,44 +96,56 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5yW-Jb-dW1" customClass="CVCalendarView" customModule="CVCalendar">
-                                <rect key="frame" x="0.0" y="114" width="375" height="300"/>
-                                <color key="backgroundColor" systemColor="systemGray4Color"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="300" id="bhJ-9y-gVV"/>
-                                </constraints>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t6h-tF-Wgz" customClass="CVCalendarMenuView" customModule="CVCalendar">
-                                <rect key="frame" x="0.0" y="44" width="375" height="50"/>
-                                <color key="backgroundColor" systemColor="systemGray2Color"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="6xo-bG-yvd"/>
-                                </constraints>
-                            </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AxU-Y5-YnY">
-                                <rect key="frame" x="234" y="514" width="121" height="30"/>
+                                <rect key="frame" x="234" y="444" width="121" height="30"/>
                                 <state key="normal" title="Floating TextField"/>
                                 <connections>
                                     <action selector="BTN_FlotatingTextField:" destination="U2c-yA-dPb" eventType="touchUpInside" id="xdB-WT-B9q"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h8o-Ip-rha">
-                                <rect key="frame" x="20" y="514" width="37" height="30"/>
+                                <rect key="frame" x="20" y="444" width="37" height="30"/>
                                 <state key="normal" title="Enjoy"/>
                                 <connections>
                                     <action selector="BTN_ProgressView:" destination="U2c-yA-dPb" eventType="touchUpInside" id="dJ9-MT-nA8"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5yW-Jb-dW1" customClass="FSCalendar">
+                                <rect key="frame" x="0.0" y="44" width="375" height="300"/>
+                                <color key="backgroundColor" systemColor="systemGray4Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="bhJ-9y-gVV"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="firstWeekday">
+                                        <integer key="value" value="0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="headerHeight">
+                                        <real key="value" value="-1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="weekdayHeight">
+                                        <real key="value" value="-1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="allowsSelection" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="allowsMultipleSelection" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="adjustsBoundingRectWhenChangingMonths" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="scrollEnabled" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="eventSelectionColor">
+                                        <color key="value" systemColor="systemOrangeColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="dataSource" destination="U2c-yA-dPb" id="da2-4w-FtY"/>
+                                    <outlet property="delegate" destination="U2c-yA-dPb" id="Zr4-Ry-tau"/>
+                                </connections>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="clY-re-tDJ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="t6h-tF-Wgz" firstAttribute="trailing" secondItem="clY-re-tDJ" secondAttribute="trailing" id="11i-Ti-bON"/>
-                            <constraint firstItem="t6h-tF-Wgz" firstAttribute="leading" secondItem="clY-re-tDJ" secondAttribute="leading" id="1iP-JC-dtR"/>
                             <constraint firstItem="clY-re-tDJ" firstAttribute="trailing" secondItem="AxU-Y5-YnY" secondAttribute="trailing" constant="20" id="9ZW-HO-tr6"/>
                             <constraint firstItem="h8o-Ip-rha" firstAttribute="top" secondItem="5yW-Jb-dW1" secondAttribute="bottom" constant="100" id="AgU-yM-V17"/>
-                            <constraint firstItem="t6h-tF-Wgz" firstAttribute="top" secondItem="clY-re-tDJ" secondAttribute="top" id="B0O-UV-vnQ"/>
-                            <constraint firstItem="5yW-Jb-dW1" firstAttribute="top" secondItem="t6h-tF-Wgz" secondAttribute="bottom" constant="20" id="MKv-dX-xAR"/>
+                            <constraint firstItem="5yW-Jb-dW1" firstAttribute="top" secondItem="clY-re-tDJ" secondAttribute="top" id="SoV-Oi-Zyt"/>
                             <constraint firstItem="AxU-Y5-YnY" firstAttribute="top" secondItem="5yW-Jb-dW1" secondAttribute="bottom" constant="100" id="e1N-pD-DGB"/>
                             <constraint firstItem="5yW-Jb-dW1" firstAttribute="trailing" secondItem="clY-re-tDJ" secondAttribute="trailing" id="gPY-Td-nRp"/>
                             <constraint firstItem="5yW-Jb-dW1" firstAttribute="leading" secondItem="clY-re-tDJ" secondAttribute="leading" id="lPS-7r-2ei"/>
@@ -142,8 +154,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="oQc-kE-swP"/>
                     <connections>
-                        <outlet property="calendarView" destination="5yW-Jb-dW1" id="jyK-J4-kri"/>
-                        <outlet property="menuView" destination="t6h-tF-Wgz" id="VbL-IF-hZC"/>
+                        <outlet property="Calander" destination="5yW-Jb-dW1" id="a4G-jr-qLz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KHW-7X-a5X" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -154,7 +165,7 @@
         <scene sceneID="88i-o0-c4b">
             <objects>
                 <navigationController id="YCm-K7-2Wd" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="mostViewed" id="l6d-yS-c60"/>
+                    <tabBarItem key="tabBarItem" image="externaldrive.fill.badge.person.crop" catalog="system" id="l6d-yS-c60"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="JFB-5c-WYv">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -513,7 +524,7 @@
         <scene sceneID="ypa-Mj-Am3">
             <objects>
                 <navigationController id="tyw-jJ-ntk" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="downloads" id="fUq-23-ZkE"/>
+                    <tabBarItem key="tabBarItem" image="square.and.arrow.down" catalog="system" id="fUq-23-ZkE"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Kzp-WE-8pU">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -526,19 +537,20 @@
             </objects>
             <point key="canvasLocation" x="770" y="-111"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Circle Bar Controller-->
         <scene sceneID="HUz-9u-x94">
             <objects>
-                <tabBarController id="Pol-0w-M2L" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="PbQ-HC-QKa">
+                <tabBarController id="Pol-0w-M2L" customClass="SHCircleBarController" customModule="CircleBar" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="PbQ-HC-QKa" customClass="SHCircleBar" customModule="CircleBar">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" systemColor="systemGray5Color"/>
+                        <color key="selectedImageTintColor" red="0.27450980390000002" green="0.43529411759999997" blue="0.99607843139999996" alpha="1" colorSpace="calibratedRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="tyw-jJ-ntk" kind="relationship" relationship="viewControllers" id="iv5-D0-b0t"/>
-                        <segue destination="lML-4s-KG3" kind="relationship" relationship="viewControllers" id="cWA-sG-GtR"/>
                         <segue destination="Cuc-kz-r3l" kind="relationship" relationship="viewControllers" id="Wf4-eP-FDb"/>
+                        <segue destination="lML-4s-KG3" kind="relationship" relationship="viewControllers" id="cWA-sG-GtR"/>
                         <segue destination="YCm-K7-2Wd" kind="relationship" relationship="viewControllers" id="jxp-4s-l4A"/>
                     </connections>
                 </tabBarController>
@@ -549,34 +561,44 @@
     </scenes>
     <designables>
         <designable name="Ceq-Jm-3q6">
-            <size key="intrinsicContentSize" width="90.5" height="34"/>
+            <size key="intrinsicContentSize" width="343" height="39.220703125"/>
         </designable>
         <designable name="M7M-rF-aAz">
-            <size key="intrinsicContentSize" width="98" height="34"/>
+            <size key="intrinsicContentSize" width="98" height="39.220703125"/>
+        </designable>
+        <designable name="PbQ-HC-QKa">
+            <size key="intrinsicContentSize" width="-1" height="49"/>
         </designable>
         <designable name="W72-mC-HeW">
-            <size key="intrinsicContentSize" width="122.5" height="34"/>
+            <size key="intrinsicContentSize" width="343" height="39.220703125"/>
         </designable>
         <designable name="j5q-TS-dmA">
-            <size key="intrinsicContentSize" width="54" height="34"/>
+            <size key="intrinsicContentSize" width="343" height="39.220703125"/>
         </designable>
         <designable name="kj9-f6-43c">
-            <size key="intrinsicContentSize" width="62.5" height="34"/>
+            <size key="intrinsicContentSize" width="343" height="39.220703125"/>
         </designable>
         <designable name="re6-gZ-bKP">
-            <size key="intrinsicContentSize" width="97" height="34"/>
+            <size key="intrinsicContentSize" width="97" height="39.220703125"/>
         </designable>
     </designables>
     <resources>
         <image name="arrowtriangle.backward" catalog="system" width="128" height="113"/>
+        <image name="externaldrive.fill.badge.person.crop" catalog="system" width="128" height="91"/>
+        <image name="folder.badge.questionmark" catalog="system" width="128" height="91"/>
+        <image name="lasso.sparkles" catalog="system" width="122" height="128"/>
+        <image name="square.and.arrow.down" catalog="system" width="121" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
-        <systemColor name="systemGray2Color">
-            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
         <systemColor name="systemGray4Color">
             <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

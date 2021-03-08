@@ -29,7 +29,7 @@ class ProgressVC: UIViewController{
         piker.delegate = self
         
         self.navigationController?.setNavigationBarHidden(true, animated: true)
-
+        
         progessView.isMultiColour = true
         progessView.numberOfCircles = 3
         progessView.mainDotColor = .blue
