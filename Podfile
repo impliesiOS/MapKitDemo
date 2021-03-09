@@ -15,6 +15,7 @@ target 'MapKitDemo' do
  pod "SwiftChart"
  pod 'Firebase/Analytics'
  pod 'Firebase/Messaging'
+pod 'Firebase/Database'	
  pod 'CircleBar'
 
   # Pods for MapKitDemo

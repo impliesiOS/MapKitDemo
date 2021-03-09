@@ -7,6 +7,8 @@
 
 import UIKit
 import SkyFloatingLabelTextField
+import FirebaseDatabase
+import Firebase
 
 class FlotingTextFieldVC: UIViewController {
     
@@ -20,6 +22,10 @@ class FlotingTextFieldVC: UIViewController {
     @IBOutlet weak var TXT_PhoneNumber: SkyFloatingLabelTextField!
     
     @IBOutlet weak var BTN_Submit: UIButton!
+
+//MARK:- Variables
+    
+    var ref =  DatabaseReference.init()
     
 //MARK:- View Controller life Cycle
     
@@ -47,8 +53,9 @@ class FlotingTextFieldVC: UIViewController {
 //        TXT_City.addTarget(TXT_PhoneNumber, action: #selector(becomeFirstResponder), for: .editingDidEndOnExit)
 //        TXT_PhoneNumber.addTarget(TXT_PhoneNumber, action: #selector(becomeFirstResponder), for: .editingDidEndOnExit)
 //        // Do any additional setup after loading the view.
+        
+        self.ref = Database.database().reference()
     }
-    
 //MARK:- Add Done button on numeric keybord
     func addDoneButtonOnKeyboard() {
         
@@ -86,6 +93,10 @@ class FlotingTextFieldVC: UIViewController {
         self.view.layer.insertSublayer(gradientLayer, at:0)
     }
     @IBAction func BTN_SubmitACTION(_ sender: Any) {
+        let Dic = ["Firstname": TXT_FirstName.text,"Lastname":TXT_LastName.text,"email": TXT_Email.text,"password": TXT_Password.text,"city":TXT_City.text,"Phonenumber":TXT_PhoneNumber.text ]
+        self.ref.child("User").childByAutoId().setValue(Dic)
+        
+        
     }
     
     @IBAction func BTN_ChartACTION(_ sender: Any) {

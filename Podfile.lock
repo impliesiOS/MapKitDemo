@@ -7,6 +7,9 @@ PODS:
     - FirebaseAnalytics (= 7.6.0)
   - Firebase/CoreOnly (7.6.0):
     - FirebaseCore (= 7.6.0)
+  - Firebase/Database (7.6.0):
+    - Firebase/CoreOnly
+    - FirebaseDatabase (~> 7.6.0)
   - Firebase/Messaging (7.6.0):
     - Firebase/CoreOnly
     - FirebaseMessaging (~> 7.6.0)
@@ -28,6 +31,9 @@ PODS:
     - GoogleUtilities/Environment (~> 7.0)
     - GoogleUtilities/Logger (~> 7.0)
     - nanopb (~> 2.30907.0)
+  - FirebaseDatabase (7.6.0):
+    - FirebaseCore (~> 7.0)
+    - leveldb-library (~> 1.22)
   - FirebaseInstallations (7.6.0):
     - FirebaseCore (~> 7.0)
     - GoogleUtilities/Environment (~> 7.0)
@@ -80,6 +86,7 @@ PODS:
     - GoogleUtilities/Logger
   - GoogleUtilities/UserDefaults (7.2.2):
     - GoogleUtilities/Logger
+  - leveldb-library (1.22)
   - nanopb (2.30907.0):
     - nanopb/decode (= 2.30907.0)
     - nanopb/encode (= 2.30907.0)
@@ -94,6 +101,7 @@ PODS:
 DEPENDENCIES:
   - CircleBar
   - Firebase/Analytics
+  - Firebase/Database
   - Firebase/Messaging
   - FSCalendar
   - GoogleMaps (= 4.1.0)
@@ -110,6 +118,7 @@ SPEC REPOS:
     - FirebaseAnalytics
     - FirebaseCore
     - FirebaseCoreDiagnostics
+    - FirebaseDatabase
     - FirebaseInstallations
     - FirebaseInstanceID
     - FirebaseMessaging
@@ -119,6 +128,7 @@ SPEC REPOS:
     - GoogleMaps
     - GooglePlaces
     - GoogleUtilities
+    - leveldb-library
     - nanopb
     - PromisesObjC
     - RProgressView
@@ -132,6 +142,7 @@ SPEC CHECKSUMS:
   FirebaseAnalytics: 9f8f4feab1f3fddf4e4515f8f022fe6aa9e51043
   FirebaseCore: 0a43b7f1c5b36f3358cd703011ca4c7e0df55870
   FirebaseCoreDiagnostics: ee1184d51da3293335b83355aad20f537acc24cf
+  FirebaseDatabase: 21842227253dafe61482065148fd044ba7983a41
   FirebaseInstallations: 6e4e77396559bc2ae0504823837ed737b1c7e47f
   FirebaseInstanceID: cf243611700eddc916b093353adbd4da822cfa63
   FirebaseMessaging: 4b9b2850fcfcaac2820097ee3703ba6cfff3df84
@@ -141,6 +152,7 @@ SPEC CHECKSUMS:
   GoogleMaps: 008e2c80e38605b56b560e8deb73d4194ff30bef
   GooglePlaces: a058b776259c13e1323c9ff135549cb1b13ad8e7
   GoogleUtilities: 31c5b01f978a70c6cff2afc6272b3f1921614b43
+  leveldb-library: 55d93ee664b4007aac644a782d11da33fba316f7
   nanopb: 59221d7f958fb711001e6a449489542d92ae113e
   PromisesObjC: 3113f7f76903778cf4a0586bd1ab89329a0b7b97
   RProgressView: 2b183d6a654df885dd84c163178f5fe712ca7f7e
@@ -148,6 +160,6 @@ SPEC CHECKSUMS:
   SwiftChart: ba767a678d568a5ee22d419e146a0582865e1aff
   SwiftSignatureView: cd8cca297cc2ca6a6c174da22fb908c33d03d3c0
 
-PODFILE CHECKSUM: d4125b2e151129fc6cb94770af4e0665b5d86e9e
+PODFILE CHECKSUM: ebe4a621d7cf902d7ef23ee3a5a98fcac911a1d7
 
 COCOAPODS: 1.10.1
