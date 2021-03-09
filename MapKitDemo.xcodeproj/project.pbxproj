@@ -23,6 +23,8 @@
 		8856E71725DFB31700C7FC4D /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8856E71625DFB31700C7FC4D /* MapKit.framework */; };
 		8856E72D25DFBB9700C7FC4D /* GoogleMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8856E72C25DFBB9700C7FC4D /* GoogleMapViewController.swift */; };
 		8856E75025DFD11500C7FC4D /* CalanderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8856E74F25DFD11500C7FC4D /* CalanderViewController.swift */; };
+		885A8B6525F74A2B00262783 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885A8B6425F74A2B00262783 /* LoginVC.swift */; };
+		885A8B7125F7517800262783 /* TabBarcontroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885A8B7025F7517800262783 /* TabBarcontroller.swift */; };
 		885E6E4325E4BC8B00D6D8D8 /* ChartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885E6E4225E4BC8B00D6D8D8 /* ChartVC.swift */; };
 		885E6EA025E4CE7F00D6D8D8 /* Localize VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885E6E9F25E4CE7F00D6D8D8 /* Localize VC.swift */; };
 		885E6EBC25E4DDA900D6D8D8 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 885E6EBE25E4DDA900D6D8D8 /* Localizable.strings */; };
@@ -76,6 +78,8 @@
 		8856E71625DFB31700C7FC4D /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		8856E72C25DFBB9700C7FC4D /* GoogleMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleMapViewController.swift; sourceTree = "<group>"; };
 		8856E74F25DFD11500C7FC4D /* CalanderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalanderViewController.swift; sourceTree = "<group>"; };
+		885A8B6425F74A2B00262783 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		885A8B7025F7517800262783 /* TabBarcontroller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarcontroller.swift; sourceTree = "<group>"; };
 		885E6E4225E4BC8B00D6D8D8 /* ChartVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartVC.swift; sourceTree = "<group>"; };
 		885E6E9F25E4CE7F00D6D8D8 /* Localize VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Localize VC.swift"; sourceTree = "<group>"; };
 		885E6EBA25E4DD8300D6D8D8 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Main.strings; sourceTree = "<group>"; };
@@ -217,6 +221,7 @@
 				8856E75425DFD11B00C7FC4D /* CalanderViewController  */,
 				8856E73225DFBBA500C7FC4D /* GoogleViewController */,
 				8856E6EF25DF947F00C7FC4D /* MapViewController */,
+				885A8B6925F74A2E00262783 /* LoginVC */,
 			);
 			path = Controlllers;
 			sourceTree = "<group>";
@@ -263,6 +268,15 @@
 				8856E74F25DFD11500C7FC4D /* CalanderViewController.swift */,
 			);
 			path = "CalanderViewController ";
+			sourceTree = "<group>";
+		};
+		885A8B6925F74A2E00262783 /* LoginVC */ = {
+			isa = PBXGroup;
+			children = (
+				885A8B7025F7517800262783 /* TabBarcontroller.swift */,
+				885A8B6425F74A2B00262783 /* LoginVC.swift */,
+			);
+			path = LoginVC;
 			sourceTree = "<group>";
 		};
 		885E6E4725E4BC9300D6D8D8 /* Chart VC */ = {
@@ -583,9 +597,11 @@
 				8872A31625E3C0A7004BE684 /* FlotingTextFieldVC.swift in Sources */,
 				8856E6B925DF943500C7FC4D /* MapKitDemo.xcdatamodeld in Sources */,
 				8856E6B125DF943500C7FC4D /* SceneDelegate.swift in Sources */,
+				885A8B6525F74A2B00262783 /* LoginVC.swift in Sources */,
 				88413CA625E36F7F00E50DBE /* ProgressVC.swift in Sources */,
 				8856E6F425DF94C700C7FC4D /* MapViewController.swift in Sources */,
 				8872A30425E3B89B004BE684 /* UIcolor+extension.swift in Sources */,
+				885A8B7125F7517800262783 /* TabBarcontroller.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

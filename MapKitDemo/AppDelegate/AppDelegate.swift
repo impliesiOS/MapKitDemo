@@ -11,6 +11,7 @@ import GoogleMaps
 import GooglePlaces
 import Firebase
 import FirebaseDatabase
+import FirebaseAuth
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate, MessagingDelegate {
@@ -18,6 +19,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         FirebaseApp.configure()
+        
+        Auth.auth().addStateDidChangeListener { (auth, user) in
+          // ...
+        }
+
         
         Messaging.messaging().isAutoInitEnabled = true
         Messaging.messaging().delegate = self
@@ -35,8 +41,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
                 print("FCM registration token: \(token)")
             }
         }
-        
-       
         // Override point for customization after application launch.
         return true
     }

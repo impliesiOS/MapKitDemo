@@ -9,6 +9,7 @@ import UIKit
 import SkyFloatingLabelTextField
 import FirebaseDatabase
 import Firebase
+import FirebaseAuth
 
 class FlotingTextFieldVC: UIViewController {
     
@@ -93,11 +94,77 @@ class FlotingTextFieldVC: UIViewController {
         self.view.layer.insertSublayer(gradientLayer, at:0)
     }
     @IBAction func BTN_SubmitACTION(_ sender: Any) {
-        let Dic = ["Firstname": TXT_FirstName.text,"Lastname":TXT_LastName.text,"email": TXT_Email.text,"password": TXT_Password.text,"city":TXT_City.text,"Phonenumber":TXT_PhoneNumber.text ]
-        self.ref.child("User").childByAutoId().setValue(Dic)
         
+            if (TXT_Email.text!.count == 0) {
+                
+                TXT_Email.errorMessage = ValEmptyEmail
+            }
+            else if (emailvelidation(emailID: TXT_Email.text!) == false)
+            {
+                TXT_Email.errorMessage = ValEmail
+            }
+            else {
+                TXT_Email.errorMessage = ""
+            }
+            if (TXT_FirstName.text!.count == 0) {
+                
+                TXT_FirstName.errorMessage = "Enter First Name"
+            }
+            else {
+                TXT_FirstName.errorMessage = ""
+            }
         
+            if (TXT_LastName.text!.count == 0) {
+
+                TXT_LastName.errorMessage = "Enter Last Name"
+            }
+            else {
+                TXT_LastName.errorMessage = ""
+            }
+            if (TXT_City.text!.count == 0) {
+                
+                TXT_City.errorMessage = ValEmptyCity
+            }
+            else {
+                TXT_City.errorMessage = ""
+            }
+            if (TXT_Password.text!.count <= 6) {
+                
+                TXT_Password.errorMessage = "please enter more than 6 character "
+            }
+            else {
+                TXT_Password.errorMessage = ""
+            }
+            if (TXT_PhoneNumber.text!.count == 0) {
+                
+                TXT_PhoneNumber.errorMessage = valEmptyMno
+            }
+            else if TXT_PhoneNumber.text?.count ?? 0 <= 9{
+                TXT_PhoneNumber.errorMessage = ValMno
+            }
+            else {
+                TXT_PhoneNumber.errorMessage = ""
+                
+                SigninFireBase()
+                
+                let Dic = ["Firstname": TXT_FirstName.text,"Lastname":TXT_LastName.text,"email": TXT_Email.text,"password": TXT_Password.text,"city":TXT_City.text,"Phonenumber":TXT_PhoneNumber.text ]
+                self.ref.child("User").childByAutoId().setValue(Dic)
+                
+                let GotoChartVC = self.storyboard?.instantiateViewController(withIdentifier: "TabBarcontroller") as! TabBarcontroller
+                self.navigationController?.pushViewController(GotoChartVC, animated: true)
+            }
     }
+    
+//MARK:- Ragister FireBase
+    func SigninFireBase(){
+        Auth.auth().createUser(withEmail: TXT_Email.text!, password: TXT_Password.text!) { (authresult, error) in
+            guard let user = authresult?.user, error == nil else{
+                print("error\(error?.localizedDescription)")
+                return
+            }
+        }
+    }
+    
     
     @IBAction func BTN_ChartACTION(_ sender: Any) {
         let GotoChartVC = self.storyboard?.instantiateViewController(withIdentifier: "ChartVC") as! ChartVC
